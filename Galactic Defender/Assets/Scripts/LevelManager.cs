@@ -25,4 +25,8 @@ public class LevelManager : MonoBehaviour
         Debug.Log("Quitting the Game...");
         Application.Quit();
     }
+
+    public void LevelTwo(){
+        SceneManager.LoadScene("LevelTwo");
+    }
 }
