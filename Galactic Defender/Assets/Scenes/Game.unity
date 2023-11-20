@@ -188,7 +188,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.05
+  m_fontSize: 52.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -886,7 +886,75 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a991b5b5-7ef3-439a-a4d1-ee7076c55e01
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6e6d6b5e-16a5-4ca3-9503-5e9c58171df9
+    m_ActionName: Player/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 68443c99-74cd-427d-86d7-d92cba93059a
+    m_ActionName: Player/Fire[/Mouse/leftButton,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1548208175}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnSpreadShot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 04356697-9a9b-4456-9ed8-44cfa3edda60
+    m_ActionName: Player/SpreadShot[/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e8f58530-0b35-417c-bc55-464960ec7eb4
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 967fa646-68ea-4886-9df4-6be841657512
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1b1c2e75-ea99-4a43-ae28-0b98c39b2b73
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b56f6edc-297f-4552-b9ed-9173fdccdf05
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 547dce49-19a3-4fce-b291-df264539c7ac
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 01c3ab51-800b-40a2-8f1e-f0ffb68550de
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3d37e89f-f544-4da1-823e-2dc1b373f9de
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b070a0dc-442c-459a-8b46-d1c907e792d0
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9332233f-ee1f-4967-a79f-60ac5537d829
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 83c6398a-d937-4501-ab79-7c77febab3ae
+    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1370,6 +1438,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5209438025906840580, guid: 032a1ac89ddfbee4cbe441b91111657a, type: 3}
+      propertyPath: useSpreadShot
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5209438025906840580, guid: 032a1ac89ddfbee4cbe441b91111657a, type: 3}
       propertyPath: basefiringRate
       value: 1.5

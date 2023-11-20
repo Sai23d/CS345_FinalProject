@@ -57,9 +57,24 @@ public class Player : MonoBehaviour
 
     void OnFire(InputValue value)
     {
-        if(shooter != null)
+        if (shooter != null)
         {
-            shooter.isFiring = value.isPressed;
+            if (value.isPressed)
+            {
+                shooter.StartFiring();
+            }
+            else
+            {
+                shooter.StopFiring();
+            }
+        }
+    }
+
+    public void OnSpreadShot(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            shooter.ActivateSpreadShot();
         }
     }
 }
