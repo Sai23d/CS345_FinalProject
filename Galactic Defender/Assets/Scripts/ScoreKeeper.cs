@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class ScoreKeeper : MonoBehaviour
 {
+    LevelManager levelManager;
     int score;
+
+    void Awake(){
+         levelManager = FindAnyObjectByType<LevelManager>();
+    }
 
     public int GetScore()
     {
@@ -16,6 +21,9 @@ public class ScoreKeeper : MonoBehaviour
         score += value;
         Mathf.Clamp(score, 0, int.MaxValue);
         Debug.Log(score);
+        if(score >= 300){
+            levelManager.LevelTwo();
+        }
     }
 
     public void Reset()
