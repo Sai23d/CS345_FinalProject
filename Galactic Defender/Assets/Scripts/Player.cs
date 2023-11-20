@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 8f;
     Vector2 rawInput;
+    private Health currentHealth;
 
     [SerializeField] float paddingLeft;
     [SerializeField] float paddingRight;
@@ -24,6 +25,7 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
+        currentHealth = GameObject.FindObjectOfType<Health>();
         InitBounds();
     }
 
@@ -62,4 +64,11 @@ public class Player : MonoBehaviour
             shooter.isFiring = value.isPressed;
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag=="Power")
+        currentHealth.RecoverHealth();
+        Destroy(other.gameObject);
+    }
+ 
 }

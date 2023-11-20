@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 
     [SerializeField] bool isPlayer;
     [SerializeField] int health = 50;
+    [SerializeField] int powerHealth = 10;
     [SerializeField] int score = 50;
     [SerializeField] ParticleSystem hitEffect;
 
@@ -80,6 +81,16 @@ public class Health : MonoBehaviour
         {
             cameraShake.Play();
         }
+    }
+
+    public void RecoverHealth(){
+        if (health <50){
+            health += powerHealth;
+            if(health > 50){
+                health = 50;
+            }
+        }
+        print(GetHealth());
     }
 }
 
