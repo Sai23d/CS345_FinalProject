@@ -22,11 +22,6 @@ public class ScoreKeeper : MonoBehaviour
         score += value;
         score = Mathf.Clamp(score, 0, int.MaxValue); // Clamp the score value
         Debug.Log(score);
-
-        if (score >= 1000 && levelManager != null)
-        {
-            levelManager.CheckLevelProgress(); // New method to be added in LevelManager
-        }
     }
 
     public void Reset()

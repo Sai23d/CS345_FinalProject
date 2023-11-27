@@ -10,8 +10,11 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("Update called in LevelManager - Current Score: " + scoreKeeper.GetScore());
+
         if (!levelLoaded && scoreKeeper != null && scoreKeeper.GetScore() >= 1000)
         {
+            Debug.Log("Score threshold reached, loading next level.");
             LoadNextLevel();
             levelLoaded = true;
         }
@@ -21,7 +24,7 @@ public class LevelManager : MonoBehaviour
     {
         string currentScene = SceneManager.GetActiveScene().name;
 
-        if (currentScene == "Game") // Assuming "Game" or "LevelOne" is your first level
+        if (currentScene == "Game") 
         {
             SceneManager.LoadScene("LevelTwo");
         }
@@ -63,13 +66,13 @@ public class LevelManager : MonoBehaviour
     }
 
 
-    public void CheckLevelProgress()
-    {
-        if (!levelLoaded && scoreKeeper != null && scoreKeeper.GetScore() >= 1000)
-        {
-            LoadNextLevel();
-            levelLoaded = true;
-        }
-    }
+    //public void CheckLevelProgress()
+    //{
+      //  if (!levelLoaded && scoreKeeper != null && scoreKeeper.GetScore() >= 1000)
+        //{
+          //  LoadNextLevel();
+            //levelLoaded = true;
+        //}
+    //}
 
 }
