@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Update called in LevelManager - Current Score: " + scoreKeeper.GetScore());
+        //Debug.Log("Update called in LevelManager - Current Score: " + scoreKeeper.GetScore());
 
         if (!levelLoaded && scoreKeeper != null && scoreKeeper.GetScore() >= 1000)
         {
