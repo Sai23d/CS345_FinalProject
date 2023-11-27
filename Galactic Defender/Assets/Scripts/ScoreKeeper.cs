@@ -7,8 +7,9 @@ public class ScoreKeeper : MonoBehaviour
     LevelManager levelManager;
     int score;
 
-    void Awake(){
-         levelManager = FindAnyObjectByType<LevelManager>();
+    void Awake()
+    {
+        levelManager = FindObjectOfType<LevelManager>(); // Find the LevelManager in the scene
     }
 
     public int GetScore()
@@ -19,10 +20,12 @@ public class ScoreKeeper : MonoBehaviour
     public void ModifyScore(int value)
     {
         score += value;
-        Mathf.Clamp(score, 0, int.MaxValue);
+        score = Mathf.Clamp(score, 0, int.MaxValue); // Clamp the score value
         Debug.Log(score);
-        if(score >= 300){
-            levelManager.LevelTwo();
+
+        if (score >= 1000 && levelManager != null)
+        {
+            levelManager.CheckLevelProgress(); // New method to be added in LevelManager
         }
     }
 

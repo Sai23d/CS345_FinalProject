@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     Vector2 minBounds;
     Vector2 maxBounds;
 
-    Shooter shooter; 
+    Shooter shooter;
 
     void Awake()
     {
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       Move();
+        Move();
     }
 
     void InitBounds()
@@ -80,10 +80,12 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.tag=="Power")
-        currentHealth.RecoverHealth();
-        Destroy(other.gameObject);
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Power"))
+        {
+            //currentHealth.RecoverHealth(); // Add parameter if needed
+            Destroy(other.gameObject);
+        }
     }
- 
 }

@@ -170,7 +170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
-  health: 50
+  health: 300
+  powerHealth: 10
   score: 0
   hitEffect: {fileID: 2221805012005341499, guid: d963b535032608748b1961d78227d31a, type: 3}
   applyCameraShake: 1
@@ -193,4 +194,8 @@ MonoBehaviour:
   useAI: 0
   firingRateVariance: 0
   minimumFiringRate: 0.1
-  isFiring: 0
+  useSpreadShot: 1
+  spreadProjectileCount: 3
+  spreadAngle: 45
+  spreadShotDuration: 5
+  spreadShotCooldown: 10

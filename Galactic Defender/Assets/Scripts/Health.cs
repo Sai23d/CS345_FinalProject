@@ -6,8 +6,8 @@ public class Health : MonoBehaviour
 {
 
     [SerializeField] bool isPlayer;
-    [SerializeField] int health = 50;
-    [SerializeField] int powerHealth = 10;
+    [SerializeField] int health = 300;
+    //[SerializeField] int powerHealth = 10;
     [SerializeField] int score = 50;
     [SerializeField] ParticleSystem hitEffect;
 
@@ -83,13 +83,10 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void RecoverHealth(){
-        if (health <50){
-            health += powerHealth;
-            if(health > 50){
-                health = 50;
-            }
-        }
+    public void RecoverHealth(int amount)
+    {
+        health += amount;
+        health = Mathf.Clamp(health, 0, 300); // Assuming 50 is the maximum health
         print(GetHealth());
     }
 }
