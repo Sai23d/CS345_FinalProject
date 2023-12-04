@@ -27,6 +27,7 @@ public class Shooter : MonoBehaviour
     private bool isFiring;
     private bool isSpreadShotActive = false;
     private float spreadShotTimer = 0f;
+    private bool isSpreadShotReady = true;
 
     Coroutine firingCoroutine;
     AudioPlayer audioPlayer;
@@ -75,10 +76,11 @@ public class Shooter : MonoBehaviour
 
     public void ActivateSpreadShot()
     {
-        if (!isSpreadShotActive)
+        if (!isSpreadShotActive && isSpreadShotReady)
         {
             Debug.Log("Spread shot activated!");
             isSpreadShotActive = true;
+            isSpreadShotReady = false; // Spread shot is now on cooldown
             spreadShotTimer = spreadShotDuration;
             StartCoroutine(SpreadShotCooldown());
         }
@@ -88,6 +90,7 @@ public class Shooter : MonoBehaviour
     {
         yield return new WaitForSeconds(spreadShotCooldown);
         isSpreadShotActive = false;
+        isSpreadShotReady = true; // Spread shot is ready to be activated again
     }
 
     void Fire()

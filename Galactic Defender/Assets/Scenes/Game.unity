@@ -428,7 +428,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.3
+  m_fontSize: 41.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeDuration: 1
-  shakeMagnitude: 0.5
+  shakeMagnitude: 0.2
 --- !u!114 &531397253 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4335273947607169446, guid: 59a0f718a363d3c4d86a860725775f87, type: 3}
@@ -2432,6 +2432,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5209438025906840580, guid: 032a1ac89ddfbee4cbe441b91111657a, type: 3}
       propertyPath: projectileLifetime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5209438025906840580, guid: 032a1ac89ddfbee4cbe441b91111657a, type: 3}
+      propertyPath: spreadShotCooldown
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4267869230811295963, guid: 032a1ac89ddfbee4cbe441b91111657a, type: 3}
